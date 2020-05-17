@@ -1,0 +1,44 @@
+<!-- FORM ERROR VIEW -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bookmark-list" content="web application with a list of bookmarks">
+    <link rel="stylesheet" href="index.css">
+    <title>Bookmark List</title>
+</head>
+<body>
+    <h1>Bookmark List</h1>
+    <form id="bookmark-form">
+        <label for="add-bookmark">Add New Bookmark:</label>
+        <input type="text" id="new-bookmark" placeholder="Enter New Bookmark" required>
+        <select name="rating" id="book-rate">
+            <option value="">--Give A Rating--</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <textarea id="bookmark-description" placeholder="Give a description"></textarea>
+        <div id="error-message">Rating required</div>
+        <button id="create-bookmark">Create</button>
+        <button id="cancel-bookmark">Cancel</button>
+
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+<code>
+    const store = {
+        bookmarks: [...],
+        adding: false,
+        error: ${error.message},
+        filter: 0
+      };
+</code>
